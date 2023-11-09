@@ -1,0 +1,26 @@
+[
+  {
+    "icon": "icon-javascript",
+    "title": "JavaScript",
+    "path": "javascript.html",
+    "background": "bg-[#ebd94e]"
+  },
+  {
+    "icon": "icon-react",
+    "title": "React",
+    "path": "react.html",
+    "background": "bg-[#cc5534]"
+  },
+  {
+    "icon": "icon-express",
+    "title": "Express",
+    "path": "express.html",
+    "background": "bg-[#cc5534]"
+  },
+  {
+    "icon": "icon-mongodb",
+    "title": "MongoDB",
+    "path": "mongodb.html",
+    "background": "bg-[#cc5534]"
+  }
+]
