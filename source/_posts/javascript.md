@@ -16,12 +16,10 @@ plugins:
 ### Hoisting 
 
 ```js
-//what is hoisting?
-//Ans: We can use variable before declaration
-Example:
 console.log(a) //Output:undefined
 var a = 12;
 ```
+We can use variable before declaration
 ### primitives and reference 
 ```
 primitives=  number,null,string,undefined,boolean,etc
@@ -49,49 +47,82 @@ else
 }
 ```
 ### Function
-```jsx
+```js
 function printHello()
 {
     console.log("Hello World");
 }
 printHello();
 ```
+#### Output
+```markdown
+Hello World
+```
 ### Function with Argument
-```jsx
+```js
 function add(a,b)
 {
   console.log(a+b);
 }
-add(2,8); // 10
+add(2,8); 
+```
+#### Output
+```markdown
+10
+```
+## Arrow Functions
+### fat arrow function
+```js
+var ArrowFunction = ()=>{};
 ```
 
+### fat arrow with one parameter 
+```js
+var arrowOneParameter = (parm)=>{console.log(parm)};
+```
+### fat arrow with implicit return
+```
+var ArrowImpicit = ()=>10;
+```
 ## Loops
 ### for loop
-```jsx
+```js
 for(var i =0;i<=10;i++)
 {
   console.log(i);
 }
+
+```
+#### Output
+```markdown
+ 1 2 3 4 5 6 7 8 9 10
 ```
 ### while loop
-```jsx
+```js
 var i = 1;
 while (i <= 10) {
   text += "The number is :: " + i;
   i++;
 }
 ```
+#### Output
+```markdown
+ 1 2 3 4 5 6 7 8 9 10
+```
 ### For Each loop
-```jsx
+```js
 var a = [1,2,3,4,5,6,7,8,9,10];
 
 a.forEach(function(val){
     console.log(val)
 })
-//Output 1 2 3 4 5 6 7 8 9 10
 ```
-### For in loop
-```jsx
+#### Output
+```markdown
+ 1 2 3 4 5 6 7 8 9 10
+```
+### For In loop
+```js
 var obj ={
   name:"Bhavya",
   age: 17
@@ -102,58 +133,72 @@ for(var key in obj)
     console.log(key,obj[key]);
 }
 
-//name Bhavya
-//age 17
+```
+#### Output
+```markdown
+name Bhavya
+age 17
 ```
 ## Array
 
 ### Array Declation 
-```jsx
+```js
 var array = [1,2,3,4,5,6,7,8.9,10];
 ```
 
-### Array Basic Operations
-```jsx
+### Array Basic Operations {.col-span-2 .row-span-2}
+```js
 var arr = [1,2,3,4,5,6,7,8,9];
  ```
-To Add Values at Start
+#### To Add Values at Start
 ```js
 arr.push(10);
 //a = [1,2,3,4,5,6,7,8,9,10];
 ```
-To Delete Values from last array
+#### To Delete Values from last array
 ```js
 arr.pop(); 
 //a = [1,2,3,4,5,6,7,8,9];
 ```
-To add Values at Start
+#### To add Values at Start
 ```js
 arr.unshift(0);
 //a = [0,1,2,3,4,5,6,7,8,9];
 ```
-To Delete Values from Start
+#### To Delete Values from Start
 ```js
 arr.shift(); 
 //a = [1,2,3,4,5,6,7,8,9];
 ```
 ### Array Splice
-```jsx
+```js
 var arr = [1,2,3,4,5,6,7];
 arr.splice(2,1);
-//arr=[1,2,4,5,6,7]
 ```
+
+#### Output
+```markdown
+arr=[1,2,4,5,6,7]
+```
+
 ## Object
 ### Declation
-```jsx
+```js
 var a ={
     name:"Bhavya Kachhadiya", //name=property
     email:"kachhadiyabhavya@gmail.com",//email=property
 }
 
-console.log(a.name); //Bhavya Kachhadiya
-console.log(a.email);//kachhadiyabhavya@gmail.com
+console.log(a.name);
+console.log(a.email);
+```
+#### Output
+```markdown
+Bhavya Kachhadiya
+kachhadiyabhavya@gmail.com
 ```
 ## Var VS Let
+### Var
 ```js
 function Var()
 {
@@ -164,7 +209,9 @@ function Var()
     console.log(i);//1 2 3 4 5 6 7 8 9 10
 }
 Var();
-
+```
+### Let
+```js
 function Let()
 {
   for(let i = 1; i<10;i++)
@@ -175,7 +222,7 @@ function Let()
 }
 Let();
 ```
-
+### Difference
 ```markdown
 Difference between var and let
 - var -> ES5
@@ -189,8 +236,8 @@ Let
 - we can use only inside braces.
 - Let ,const dosen't adds itself to the window object
 ```
-## Sprid Opertor
-```jsx
+## Spread Operator
+```js
 var a = [1,2,3,4,5];
 var b =[...a];
 
@@ -199,7 +246,7 @@ var copyobj = {...obj};
 ```
 ## Truthy and Falsy
 ### Falsy
-```jsx
+```js
 if(0)
 {
     console.log("Truthy");
@@ -265,13 +312,13 @@ Truthy
 
 ## Callback Function
 ### SetTimeout
-```jsx
+```js
 setTimeout(function(){
     consloe.log("2 second Completed");
 },2000);
 ```
 ### First Class Function
-```jsx
+```js
 function abcd(a)
 {
     a();
@@ -281,7 +328,7 @@ abcd(function(){
 })
 ```
 ### Object Deletetion
-```jsx
+```js
 var a = {
   name:"Bhavya",
   age:17
@@ -297,32 +344,35 @@ delete a.name;
 // a
 // {}
 ```
-### higher-order function
-```jsx
-//Method 1
+## higher-order function
+### Method 1
+```js
 function abcd(val)
 {
 
 }
 abcd(function(){})
-
-// Menthod 2
+```
+### Method 2
+```js
 function abcd()
 {
     return function(){}
 }
-
-//Exmaple
-
+```
+### Exmaple
+```js
 var arr = [1,2,3,4,5];
 
-arr.forEach(function(){}) // here forEach is higherOrder Function
-
-// A higher-order function that accepts functions as parameters.
+arr.forEach(function(){}) 
+```
+#### What is Higher-Order function
+```markdown
+ A higher-order function that accepts functions as parameters.
 ```
 ## Construtor
-### Construtor Expalme
-```jsx
+### Construtor Example {.col-span-3}
+```js
 function Car(make, model, year) {
   this.make = make;
   this.model = model;
@@ -333,13 +383,19 @@ function Car(make, model, year) {
 const car1 = new Car("Toyota", "Camry", 2020);
 const car2 = new Car("Honda", "Civic", 2021);
 
-console.log(car1); // Outputs: Car { make: 'Toyota', model: 'Camry', year: 2020 }
-console.log(car2); // Outputs: Car { make: 'Honda', model: 'Civic', year: 2021 }
+console.log(car1); 
+console.log(car2);
 ```
-## iife
-```jsx
-// iife -> immediately invoked function expression
+#### Output
+```markdown
+Car { make: 'Toyota', model: 'Camry', year: 2020 }
+Car { make: 'Honda', model: 'Civic', year: 2021 }
+```
 
+## iife
+### Example {.col-span-3}
+iife -> immediately invoked function expression
+```js
 var ans = (function(){
     var privateVar= 10;
     
@@ -353,16 +409,19 @@ var ans = (function(){
       }
     };
   })();
+```
+#### Output
+```markdown
+ans.getData()
+10
 
-//ans.getData()
-//10
-
-// ans.setData(100)
-//ans.getData()
-//100
+ans.setData(100)
+ans.getData()
+100
 ```
 ## Inhertinance
-```jsx
+### Example
+```js
 var human = {
   canFly: false,
   canTalk: true,
@@ -373,17 +432,19 @@ var programmer = {
     canMakeAWebsite: true
 }
 programmer.__proto__= human;
-// Output
-// {canProgram: true, canMakeAWebsite: true}
-//   canMakeAWebsite: true
-//   canProgram:true
-//   [[Prototype]]: Object
-//     canFly:false
-//     canTalk:true
-//     canWalk:true
+```
+#### Output
+```markdown
+ {canProgram: true, canMakeAWebsite: true}
+   canMakeAWebsite: true
+   canProgram:true
+   [[Prototype]]: Object
+     canFly:false
+     canTalk:true
+     canWalk:true
 ```
 ## This Keyword
-```jsx
+```js
 //global scope
 console.log(this);
 
@@ -400,8 +461,8 @@ var obj = {
     }
 }
 ```
-### this keyword Exmplae
-```jsx
+### this keyword Example
+```js
 var button = document.querySelector('button');
 
 button.addEventListener("click",function(){
@@ -411,8 +472,6 @@ button.addEventListener("click",function(){
 ## Call, Blind, Apply
 ### Call
 ```js
-// Call
-
 function abcd(){
     console.log(this.age); // 17
 }
@@ -420,11 +479,14 @@ function abcd(){
 var obj = {age: 17}
 
 abcd.call(obj)
+
+```
+#### Output
+```markdown
+17
 ```
 ### Blind
 ```js
-// Blind
-
 function abcd(){
     console.log(this.age); // 17
 }
@@ -434,9 +496,12 @@ var obj = {age: 17}
 var blindFunction = abcd.blind(obj)
 blindFunction();
 ```
+#### Output
+```markdown
+17
+```
 ### Apply
 ```js
-// Apply
 function abcd(val,val2){
     console.log(this.age,val,val2); // 17 1 2 3
 }
@@ -445,8 +510,12 @@ var obj = {age: 17}
 
 abcd.apply(obj,[1,2,3])
 ```
+#### Output
+```markdown
+17 1 2 3
+```
 ## Pure and Impure Function
-### Pure Function
+### Pure Function 
 ```js
 function abcd(a, b) {
     return a * b;
@@ -456,32 +525,15 @@ var ans2 = abcd(1, 2)
 ```
 ### Impure Function
 ```js
-
 function abcd(val){
     return Math. random()*val;
 }
-
 var ans1 = (2)
 var ans2 = (2)
 ```
-### Working of setTimeOut
-```jsx
-console.log("1")
-setTimeout(function(){console.log("2")},2000)
-console.log("3");
-console.log("4");
-console.log("5");
-
-//Output
-// 1
-// 3
-// 4
-// 5
-// 2
-```
 ## Promise
 ### Exmple
-```jsx
+```js
 var ans = new Promise((res,rej)=>{
     if (true) {
         return res();
@@ -499,7 +551,7 @@ ans
 })
 ```
 ### Async and await
-```jsx
+```js
 async function abcd()
 {
     let raw = await fetch ("https://randomuser.me/api/")
@@ -513,7 +565,7 @@ abcd();
 
 ### Selection of an Element
 
-```jsx
+```js
 document.querySelector("h1") // Element
 document.querySelector(".class") //Class
 document.querySelector("#id") // ID
