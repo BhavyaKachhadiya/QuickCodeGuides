@@ -27,7 +27,7 @@ var a = 12;
 primitives=  number,null,string,undefined,boolean,etc
 reference = {} [] ()
 ```
-### if else 
+### if else  {.row-span-2}
 ```js
 if (time < 10) {
   greeting = "Good morning";
@@ -115,16 +115,25 @@ var array = [1,2,3,4,5,6,7,8.9,10];
 ### Array Basic Operations
 ```jsx
 var arr = [1,2,3,4,5,6,7,8,9];
-
-arr.push(10); // To Add Values at Start
+ ```
+To Add Values at Start
+```js
+arr.push(10);
 //a = [1,2,3,4,5,6,7,8,9,10];
-
-arr.pop(); //To Delete Values from last array
+```
+To Delete Values from last array
+```js
+arr.pop(); 
 //a = [1,2,3,4,5,6,7,8,9];
-
-arr.unshift(0); // To add Values at Start
+```
+To add Values at Start
+```js
+arr.unshift(0);
 //a = [0,1,2,3,4,5,6,7,8,9];
-arr.shift(); // To Delete Values from Start
+```
+To Delete Values from Start
+```js
+arr.shift(); 
 //a = [1,2,3,4,5,6,7,8,9];
 ```
 ### Array Splice
