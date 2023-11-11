@@ -21,7 +21,7 @@ var a = 12;
 ```
 We can use variable before declaration
 ### primitives and reference 
-```
+``` {.wrap}
 primitives=  number,null,string,undefined,boolean,etc
 reference = {} [] ()
 ```
@@ -72,12 +72,12 @@ add(2,8);
 ```
 ## Arrow Functions
 ### fat arrow function
-```js
+```js 
 var ArrowFunction = ()=>{};
 ```
 
 ### fat arrow with one parameter 
-```js
+```js {.wrap}
 var arrowOneParameter = (parm)=>{console.log(parm)};
 ```
 ### fat arrow with implicit return
@@ -222,8 +222,8 @@ function Let()
 }
 Let();
 ```
-### Difference
-```markdown
+### Difference 
+```markdown {.wrap}
 Difference between var and let
 - var -> ES5
 - let and const-> ES6

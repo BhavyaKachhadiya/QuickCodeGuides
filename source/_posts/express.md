@@ -13,19 +13,29 @@ plugins:
     - copyCode
 ---
 ## Recommend
+### Recommend
 ```markdown {.wrap}
 To start the server without re-executing the script, use the following command
 ```
+#### Install Nodemon
 ```
 npm i nodemon -g
 ```
+#### To Run Nodemon
 ```
 npx nodemon ./{YOUR_FILE_NAME}.js
 ```
+### Express Generator
 ```markdown
 npm i express-generator -g
+```
+```markdown
 express {YOUR_APP_NAME} --view=ejs
+```
+```markdown
 cd {YOUR_APP_NAME}
+```
+```markdown
 npm i
 ```
 ## Basic of Express
