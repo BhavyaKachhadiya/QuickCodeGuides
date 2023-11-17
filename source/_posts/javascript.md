@@ -183,10 +183,12 @@ arr=[1,2,4,5,6,7]
 
 ## Object
 ### Declation
-```js
+```js {.wrap}
 var a ={
-    name:"Bhavya Kachhadiya", //name=property
-    email:"kachhadiyabhavya@gmail.com",//email=property
+    name:"Bhavya Kachhadiya", 
+    //name=property
+    email:"kachhadiyabhavya@gmail.com",
+    //email=property
 }
 
 console.log(a.name);
@@ -367,9 +369,9 @@ var arr = [1,2,3,4,5];
 arr.forEach(function(){}) 
 ```
 #### What is Higher-Order function
-```markdown
+
  A higher-order function that accepts functions as parameters.
-```
+
 ## Construtor
 ### Construtor Example {.col-span-3}
 ```js
@@ -501,7 +503,7 @@ blindFunction();
 17
 ```
 ### Apply
-```js
+```js {.wrap}
 function abcd(val,val2){
     console.log(this.age,val,val2); // 17 1 2 3
 }
@@ -551,7 +553,7 @@ ans
 })
 ```
 ### Async and await
-```js
+```js {.wrap}
 async function abcd()
 {
     let raw = await fetch ("https://randomuser.me/api/")
