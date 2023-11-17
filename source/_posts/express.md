@@ -3,8 +3,7 @@ title: Express
 date: 2023-02-26 15:23:31
 background: bg-[#edc545]
 tags:
-  - config
-  - format
+  - Server 
 categories:
   - Backend
 intro: |
@@ -14,9 +13,9 @@ plugins:
 ---
 ## Recommend
 ### Recommend
-```markdown {.wrap}
+
 To start the server without re-executing the script, use the following command
-```
+
 #### Install Nodemon
 ```
 npm i nodemon -g
@@ -26,16 +25,16 @@ npm i nodemon -g
 npx nodemon ./{YOUR_FILE_NAME}.js
 ```
 ### Express Generator
-```markdown
+```
 npm i express-generator -g
 ```
-```markdown
+```
 express {YOUR_APP_NAME} --view=ejs
 ```
-```markdown
+```
 cd {YOUR_APP_NAME}
 ```
-```markdown
+```
 npm i
 ```
 ## Basic of Express
@@ -69,7 +68,7 @@ app.listen(3000);
 ```
 
 ### Routes parameters
-```js
+```js {.wrap}
 const express = require('express');
 const app = express();
 
@@ -96,7 +95,7 @@ app.get('/', (req, res) => {
 app.listen(3000);
 ```
 ### Error Handing
-```js
+```js {.wrap}
 const express = require('express')
 const app = express()
 
@@ -114,4 +113,55 @@ app.use(function errorHandler(err,req, res,next) {
     res.render('error', {err:err})
 })
 app.listen(3000)
+```
+## Sessions
+### Session {.col-span-2}
+#### Install Session
+```
+npm i express-session
+```
+#### Setup Session
+```js {.wrap}
+var session = require("express-session");
+
+// app.set("view engine", "ejs");  after this line
+app.use(session({
+  resave:false,
+  saveUninitialized:false,
+  secret:"Anything"
+}))
+```
+#### Create a new session
+```js
+router.get("/", function(req, res){
+  req.session.name = "Bhavya";
+});
+```
+
+#### Delete a session
+```js
+router.get("/deletesession", function(req, res){
+  req.session.destroy(function(err){if(err){throw err}});
+});
+```
+
+## Cookies
+### Cookies
+#### Create Cookies
+```js
+router.get("/", function(req, res){
+  res.cookie("name","Bhavya");
+});
+```
+#### Read Cookies
+```js
+router.get("/read", function(req, res){
+  res.cookies.name;
+});
+```
+#### Delete Cookies
+```js
+router.get("/read", function(req, res){
+  res.clearCookies("name");
+});
 ```
