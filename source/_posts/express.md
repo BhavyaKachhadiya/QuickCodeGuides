@@ -165,3 +165,6 @@ router.get("/read", function(req, res){
   res.clearCookies("name");
 });
 ```
+Reference
+---
+[Express](https://www.youtube.com/watch?v=pKJ4GGyDgJo&list=PLbtI3_MArDOk7J-8hR6CeB5U6bvgRKNNr&index=4) _Sheryians Coding School_

@@ -1,5 +1,5 @@
 ---
-title: MongoDB
+title: Mongoose
 date: 2023-04-05
 background: bg-gradient-to-r from-green-900 via-green-600 to-green-400 hover:from-green-900 hover:via-green-700 hover:to-green-500
 tags:
@@ -75,3 +75,6 @@ router.get("/allusers",async function(res,req){
  await userModel.find();
 })
 ```
+Reference
+---
+[Mongoose](https://www.youtube.com/watch?v=ZpszSj3ziQk&list=PLbtI3_MArDOk7J-8hR6CeB5U6bvgRKNNr&index=5) _Sheryians Coding School_
