@@ -180,7 +180,230 @@ arr.splice(2,1);
 ```markdown
 arr=[1,2,4,5,6,7]
 ```
+## Array Method
+### groupBy 
+```js {.wrap}
+const people = [
+{"name":"Michael","age":29},
+{"name":"Andy", "age":30},
+{"name":"Andy", "age":20},
+{"name":"Justin", "age":19}
+]
 
+const peopleName = Object.groupBy(people, people => people.name);
+console.log(peopleName);
+```
+#### Output
+```js
+{
+    "Michael": [
+        {
+            "name": "Michael",
+            "age": 29
+        }
+    ],
+    "Andy": [
+        {
+            "name": "Andy",
+            "age": 30
+        },
+        {
+            "name": "Andy",
+            "age": 20
+        }
+    ],
+    "Justin": [
+        {
+            "name": "Justin",
+            "age": 19
+        }
+    ]
+}
+```
+### At
+```js
+const people = [
+{"name":"Michael","age":29},
+{"name":"Andy", "age":30},
+{"name":"Andy", "age":20},
+{"name":"Justin", "age":19}
+]
+
+const At = people.at(-1)
+console.log(At);
+```
+#### Output
+```js
+{
+    "name": "Justin",
+    "age": 19
+}
+```
+
+### Fill
+```js
+const people = [
+{"name":"Michael","age":29},
+{"name":"Andy", "age":30},
+{"name":"Andy", "age":20},
+{"name":"Justin", "age":19}
+]
+
+const At = people.fill(1)
+console.log(At);
+```
+#### Output
+```js
+[1,1,1,1]
+```
+
+### toReversed
+```js
+const people = [
+{"name":"Michael","age":29},
+{"name":"Andy", "age":30},
+{"name":"Andy", "age":20},
+{"name":"Justin", "age":19}
+]
+
+const Reversed = people.toReversed();
+console.log(Reversed);
+
+```
+#### Output for Reversed
+```js
+[
+    {
+        "name": "Justin",
+        "age": 19
+    },
+    {
+        "name": "Andy",
+        "age": 20
+    },
+    {
+        "name": "Andy",
+        "age": 30
+    },
+    {
+        "name": "Michael",
+        "age": 29
+    }
+]
+```
+### toSpliced
+```js
+const people = [
+{"name":"Michael","age":29},
+{"name":"Andy", "age":30},
+{"name":"Andy", "age":20},
+{"name":"Justin", "age":19}
+]
+
+const Splice = people.toSpliced(1,1);
+console.log(Splice);
+
+```
+#### Output for Spliced
+```js
+[
+    {
+        "name": "Michael",
+        "age": 29
+    },
+    {
+        "name": "Andy",
+        "age": 20
+    },
+    {
+        "name": "Justin",
+        "age": 19
+    }
+]
+```
+
+### toSorted
+#### Code for By Name
+```js
+const people = [
+  { name: "Michael", age: 29 },
+  { name: "Andy", age: 30 },
+  { name: "Andy", age: 20 },
+  { name: "Justin", age: 19 },
+];
+
+const sortedPeopleByName = people.sort((personA, personB) => {
+  // Sort by name in ascending order
+  if (personA.name < personB.name) {
+    return -1;
+  } else if (personA.name > personB.name) {
+    return 1;
+  } else {
+    // If names are equal, sort by age
+    return personA.age - personB.age;
+  }
+});
+
+console.log(sortedPeopleByName);
+```
+
+#### Output for Sorted by Name
+```js
+[
+    {
+        "name": "Andy",
+        "age": 20
+    },
+    {
+        "name": "Andy",
+        "age": 30
+    },
+    {
+        "name": "Justin",
+        "age": 19
+    },
+    {
+        "name": "Michael",
+        "age": 29
+    }
+]
+```
+#### Code for By Age
+```js
+
+const people = [
+  { name: "Michael", age: 29 },
+  { name: "Andy", age: 30 },
+  { name: "Andy", age: 20 },
+  { name: "Justin", age: 19 },
+];
+
+const sortedPeopleByAge = people.sort((personA, personB) => personA.age - personB.age);
+
+console.log(sortedPeopleByAge);
+
+```
+#### Output for Sorted by Age 
+```js
+[
+    {
+        "name": "Justin",
+        "age": 19
+    },
+    {
+        "name": "Andy",
+        "age": 20
+    },
+    {
+        "name": "Michael",
+        "age": 29
+    },
+    {
+        "name": "Andy",
+        "age": 30
+    }
+]
+```
 ## Object
 ### Declation
 ```js {.wrap}
@@ -588,3 +811,9 @@ a.addEventListener("click", function(){
     console.log("clicked")
 })
 ```
+
+Refence
+---------
+- [Array Method](https://youtu.be/mSBnJvHtgD0?si=0Gd6CQfhPqAluJy2) _Web Dev Simplified_
+- [Basic Javascript](https://www.youtube.com/watch?v=htznIeWKgg8&list=PLbtI3_MArDOkNtOan8BQkG6P8wf6pNVz-&index=3) _Sheryians Coding School_
+- [Advance Javascript](https://www.youtube.com/watch?v=6kE8lrqfwHo&list=PLbtI3_MArDOkNtOan8BQkG6P8wf6pNVz-&index=15) _Sheryians Coding School_
