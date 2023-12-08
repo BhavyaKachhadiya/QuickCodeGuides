@@ -161,3 +161,6 @@ gsap.from("<Target_Element>",{
 })
 
 ```
+
+Reference
+- [GSAP] (https://www.youtube.com/watch?v=8_JcQq_mlOg) _Sheryians Coding School_

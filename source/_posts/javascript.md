@@ -812,7 +812,7 @@ a.addEventListener("click", function(){
 })
 ```
 
-Refence
+Reference
 ---------
 - [Array Method](https://youtu.be/mSBnJvHtgD0?si=0Gd6CQfhPqAluJy2) _Web Dev Simplified_
 - [Basic Javascript](https://www.youtube.com/watch?v=htznIeWKgg8&list=PLbtI3_MArDOkNtOan8BQkG6P8wf6pNVz-&index=3) _Sheryians Coding School_
