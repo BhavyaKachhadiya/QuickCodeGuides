@@ -165,6 +165,67 @@ router.get("/read", function(req, res){
   res.clearCookies("name");
 });
 ```
+
+## Multer
+### installtion
+```markdown
+npm i uuid multer
+```
+### any ejs file
+```html
+<form action="/upload" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" id="file">
+    <button type="submit">Upload</button>
+</form>
+```
+
+### Multer.js
+```js
+const multer = require('multer');
+const {v4: uuid4} = require('uuid');
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/')
+  },
+  filename: function (req, file, cb) {
+    const uniqueFileName = uuidv4();
+    cb(null, uniqueFileName)
+  }
+});
+
+const upload = multer({ storage: storage })
+```
+### Index.js
+```js
+const upload = require('./multerSetup');
+
+router.post('upload', upload.single('file'),(req, res) =>{
+  if(!req.file){
+    return res.status(400).send('No file were uploaded.');
+  }
+  res.send('File uploaded successfully')
+})
+```
+## authcode
+### Code for Resgistering User
+```js
+const localStrategy = require("passport-loca");
+passport.use(new localStrategy(userModel. authenticate()));
+
+router.post('/register',function (req,res){
+  var userdata = new userModel({
+    username: req.body.username,
+    secret: req.body.secret;
+  });
+  userModel.register(userdata,req.body.password).then(function (registereduser){
+    passport.authenticate("local")(req,res,function(){
+      res.redirect('/profile');
+    })
+  });
+});
+```
+
 Reference
 ---
 [Express](https://www.youtube.com/watch?v=pKJ4GGyDgJo&list=PLbtI3_MArDOk7J-8hR6CeB5U6bvgRKNNr&index=4) _Sheryians Coding School_
