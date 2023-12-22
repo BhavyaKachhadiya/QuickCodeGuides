@@ -105,7 +105,8 @@ gsap.from("<Target_Element>",{
     markers: true, // Optional 
     start: " top/bottom <Number>%", 
     end: " top/bottom <Number>%", 
-    scrub: true / 1 To 5
+    scrub: true / 1 To 5,
+    pin:true
   }
 })
 ```
